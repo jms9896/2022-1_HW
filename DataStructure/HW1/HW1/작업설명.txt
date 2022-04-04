@@ -1,0 +1,39 @@
+
+목표 : Linked list 구현
+1. 데이터(students.txt)를 linked list에 저장
+2. 데이터
+2-1. 새로운 데이터 추가
+2-2. 기존 데이터 삭제
+2-3. 검색
+2-4. 리스트 데이터순서 역순 재배치
+
+students.txt에는 이름(문자열) 학번(정수)으로 구성된 구조체이며, 아래와 같이 정의한다.
+typedef struct Listdata {
+    char name[30];
+    int id;
+} listData;
+
+리스트 노드의 정의
+typedef struct Listnode {
+    listData data;
+    struct ListNode* link;
+} listNode;
+
+리스트 첫 번째 노드를 가리키는 head
+typedef struct LinkedList {
+    listNode* head;
+    int length;
+} linkedList;
+
+작업수행순서
+(1) 리스트 저장
+- scores.txt 점수를 linked list에 순서대로 저장
+- 마지막 노드로 데이터를 저장하는 insertLast( )를 작성
+- insertLast()를 반복적으로 호출하여 사용
+(프로그램 실행시 초기에 파일의 모든 내용을 리스트에 삽입하기 위해서이다.)
+함수 정의: void insertLast(linkedList* L, listData* item)
+
+(2) 테스트
+- 명령문을 입력 받아 이를 수행하는 작업을 반복한다.
+- 명령문 입력 시 gets 로 한 줄을 읽어온다.(scanf 사용금지)
+- 후속되는 arguments 를 알아내는 방법을 사용한다.
