@@ -139,10 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="source1.c" />
+    <ClCompile Include="function.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="structure.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="작업설명.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

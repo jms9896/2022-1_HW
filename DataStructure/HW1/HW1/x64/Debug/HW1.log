@@ -1,0 +1,17 @@
+﻿  function.c
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\function.c(26,25): warning C4047: '!=': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\function.c(36,24): warning C4311: '형식 캐스트': 'char *'에서 'int'(으)로 포인터가 잘립니다.
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\function.c(44,13): warning C4013: 'insertLast'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\function.c(8,7): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\function.c(28,17): error C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\function.c(32,5): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\function.c(189,56): error C2065: 'cmdContext': 선언되지 않은 식별자입니다.
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\function.c(189,56): warning C4047: '함수': 'char **'의 간접 참조 수준이 'int *'과(와) 다릅니다.
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\function.c(189,45): warning C4024: 'strtok_s': 형식 및 실제 매개 변수 3의 형식이 서로 다릅니다.
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\function.c(190,30): warning C4047: '함수': 'listNode *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\function.c(190,20): warning C4024: 'delete': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\function.c(177,18): error C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  main.c
+C:\Users\jms9896\workspace\git\DataStructure\HW1\HW1\main.c(6,6): warning C4013: 'play'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+  structure.c
+  코드를 생성하고 있습니다...
