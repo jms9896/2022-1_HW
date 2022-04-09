@@ -26,5 +26,8 @@
     <Text Include="HW3-1_linux.txt">
       <Filter>txtFile</Filter>
     </Text>
+    <Text Include="HW3-2_linux.txt">
+      <Filter>txtFile</Filter>
+    </Text>
   </ItemGroup>
 </Project>
