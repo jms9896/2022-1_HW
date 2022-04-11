@@ -23,7 +23,7 @@ void fileRead(linkedList* L, char* fileAddress) {
 	//char c = fgetc(pFile); 해당 파일로 부터 한글자 읽어오기.
 	//fclose(pFile);    파일 닫기
 
-	while (feof(fp) != NULL) {
+	while (feof(fp) == false) {
 		int countWords = 1;
 		char* words = strtok(fileTmp, " ");
 		fgets(fileTmp, sizeof(fileTmp), fp);
