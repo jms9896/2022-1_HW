@@ -13,8 +13,8 @@ int	main(void)
     /*	get	the	default	attributes	*/
     pthread_attr_init(&attr);
     /*	create	two	threads	*/
-    pthread_create(&tid1,&attr,runner,'O');
-    pthread_create(&tid2,&attr,runner,'-');
+    pthread_create(&tid1,&attr,runner, (void*)'O');
+    pthread_create(&tid2,&attr,runner, (void*)'-');
     /*	now	wait	for	the	thread	to	exit	*/
     pthread_join(tid1,	NULL);
     pthread_join(tid2,	NULL);
