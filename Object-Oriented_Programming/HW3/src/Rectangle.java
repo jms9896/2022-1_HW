@@ -25,7 +25,55 @@ public class Rectangle
     
     /* Constructors */
 
+    /*public Rectangle(){
+        this(width:0, height:0);
+    }*/
+    public Rectangle(int w, int h) {
+        setRectangle(w,h);
+    }
+
+    public void setRectangle(int w, int h){
+        width = w;
+        height = h;
+    }
+
     /* Methods: calculateArea(), print(), resize() */
 
+    public int calculateArea() {
+        return width*height;
+    }
+
+    public void print() {
+        System.out.println(width + " * " + height);
+        for (int i = 1; i <= height; i++){
+            for (int j = 1; j <= width; i++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //System.out.println();
+    }
+
+    public void resize(int w, int h) {
+        width = w;
+        height = h;
+    }
+
+    public void setHeight(int h) {
+        height = h;
+    }
+
     /* Setters and getters */
+    public int getWidth(){
+        return width;
+    }
+    public int getHeight(){
+        return height;
+    }
+/*    public void setWidth(int width){
+        this.width = width;
+    }
+    public void setHeight(){
+
+    }*/
 }
