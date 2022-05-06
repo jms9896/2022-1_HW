@@ -22,13 +22,49 @@ int main(void)
 
 	//image 정보 저장
 	for (y = 0; y < height; y++) {
-		for (x = 0; x < width; x++) {
-			image[y][x] = x;
+		//for (x = 0; x < width; x++) {
+		//	image[y][x] = x;
+		//}
+		if (y < 100) {
+			light = 120;
+			for (x = 0; x < width; x++) {
+				image[x][y] = light;
+			}
 		}
+
+		else if (y < 200) {
+			light = 120+(15 / (200-y));
+			for (x = 0; x < width; x++) {
+				image[x][y] = light;
+			}
+		}
+
+		else if (y < 280) {
+			light = 135+((225 - 135) / (280-y));
+			for (x = 0; x < width; x++) {
+				image[x][y] = light;
+			}
+		}
+
+		else if (y < 300) {
+			light = 225+(15 / (300-y));
+			for (x = 0; x < width; x++) {
+				image[x][y] = light;
+			}
+		}
+
+		else {
+			light = 240;
+			for (x = 0; x < width; x++) {
+				image[x][y] = light;
+			}
+		}
+
+		
 	}
 
 	// 파일 열기
-	fs.open("HW1-1", ios::out | ios::binary);
+	fs.open("HW1-1_7.raw", ios::out | ios::binary);
 
 	if (fs.good())
 	{
@@ -51,48 +87,6 @@ int main(void)
 
 	return 0;
 
-	//for (int i = 0; i < imageSize; i++) {
-	//	if (i < 100) {
-	//		light = 120;
-	//		for (int j = 0; j < imageSize; j++) {
-	//			image[i][j] = light;
-	//		}
-	//	}
-
-	//	else if (i < 200) {
-	//		light = (15 / (i - 100));
-	//		for (int j = 0; j < imageSize; j++) {
-	//			image[i][j] = light;
-	//		}
-	//	}
-
-	//	else if (i < 280) {
-	//		light = (225 - 135) / (i - 200);
-	//		for (int j = 0; j < imageSize; j++) {
-	//			image[i][j] = light;
-	//		}
-	//	}
-
-	//	else if (i < 300) {
-	//		light = 15 / (i - 300);
-	//		for (int j = 0; j < imageSize; j++) {
-	//			image[i][j] = light;
-	//		}
-	//	}
-
-	//	else {
-	//		light = 240;
-	//		for (int j = 0; j < imageSize; j++) {
-	//			image[i][j] = light;
-	//		}
-	//	}
-
-	//	//printf("%d", light);
-	//}
-	//for (int i = 0; i < 512; i++) {
-	//	printf("%d", image[0][i]);
-	//}
-	////printf(image);
 	//FILE* fp;
 	//fp = fopen("HW1-1.raw", "wb");
 	//fwrite(image, sizeof(unsigned char), imageSize * imageSize, fp);
