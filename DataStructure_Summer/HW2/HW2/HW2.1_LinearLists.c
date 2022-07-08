@@ -142,8 +142,10 @@ element delete(ArrayListType *L, int pos)
 		item = L->list[pos];
 		//일단 지우려는 위치의 값을 기억하고
 		for (int i = pos; i < L->length - 1; i++) {
-			// 지우려는 위치(pos)에서 길이에 -1까지 i값 증가.
-			// 왜냐하면
+			/*지우려는 위치(pos)에서 길이에 - 1까지 i값 증가.
+			왜냐하면 length는 마지막데이터인데, 
+			이걸 앞으로 빼야하기때문에 이따가 i+1을 해줄 것임.
+			i+1하면 length라서 length-1 하는것*/
 			L->list[i] = L->list[i + 1];
 		}
 		L->length--;
@@ -159,6 +161,7 @@ void clear(ArrayListType *L)
 	// Fill your code
 	for (int i = 0; i <= L->length; i++) {
 		L->list[0] = NULL;
+		// 그냥 리스트 길이만 0으로 해주면 최초주솟값 끊어주니까 clear
 	}
 	printf("ArrayList Clear\n");
 	//완료
@@ -170,6 +173,7 @@ void replace(ArrayListType *L, int pos, element item)
 {
 	// Fill your code
 	L->list[pos] = item;
+	// 해당 위치 노드 데이터값만 바꿔주기
 	printf("ArrayList[%d]의 %d 교체\n", pos, item);
 
 	//완료

@@ -1,6 +1,9 @@
 #include <stdio.h>
-#define MAX(a,b) a > b ? a : b
-#define MAX_DEGREE 50
+#define MAX(a,b) a > b ? a : b 
+// 매크로함수 & 삼항연산자. 
+// MAX(a,b)를 정의하는데(매크로함수), 
+// a가 b보다 크다면(T) a선택, 아니라면(f) b선택(삼항연산자)
+#define MAX_DEGREE 50 
 
 typedef struct {			// 구조체 polynomial 정의 
 	int degree;		// 다항식의 차수를 저장할 변수 
