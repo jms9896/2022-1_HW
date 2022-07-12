@@ -24,5 +24,8 @@
     <ClCompile Include="Act5_LinkedList2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Act7_Heap.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
