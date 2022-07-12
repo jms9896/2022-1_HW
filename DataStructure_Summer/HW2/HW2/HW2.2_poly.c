@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdbool.h>
+
 #define MAX(a,b) a > b ? a : b 
 // 매크로함수 & 삼항연산자. 
 // MAX(a,b)를 정의하는데(매크로함수), 
@@ -12,11 +14,39 @@ typedef struct {			// 구조체 polynomial 정의
 
 polynomial addPoly(polynomial A, polynomial B) {
 	// Fill your code
-	
-
-
+	polynomial* C;
+	// C=zeroP()
+	while (isZero(A) != false && isZero(B) != false) {
+		if (maxExp(A) < maxExp(B)) {
+		}
+	}
 }
 
+
+
+
+void zeroP(polynomial* A) {
+	A->degree = 0; // 차수가 0이면 초기화
+	for (int i = 0; i < MAX_DEGREE; i++) {
+		A->coef[i] = 0; // 계수 죄다 0으로 초기화
+	}
+}
+
+bool iszero(polynomial* C) {
+	// 다항식이 0인지 아닌지 판별
+	for (int i = 0; i < MAX_DEGREE; i++) {
+		if (C->degree != NULL && C->degree != 0) {
+			// 0이나 NULL이 아니면 false 반환
+			return false;
+			break;
+		}
+		
+	}
+}
+
+int maxExp(polynomial A) {
+
+}
 void printPoly(polynomial P) {
 	int i, degree = P.degree;
 	
