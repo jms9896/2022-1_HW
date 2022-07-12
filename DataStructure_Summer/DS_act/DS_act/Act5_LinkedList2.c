@@ -5,7 +5,7 @@
 typedef int element;
 typedef struct ListNode {
 	element data;
-	struct ListNode* llink, rlink;
+	struct ListNode* llink,* rlink;
 }listNode;
 
 typedef struct LinkedList {
