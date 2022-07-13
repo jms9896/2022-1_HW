@@ -1,0 +1,6 @@
+﻿  TestPairMain.c
+C:\Users\jms9896\workspace\git\2022-1_HW\DataStructure_Summer\HW5\HW5.3\TestPairMain.c(10,24): warning C4013: 'strlen'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+TestPairMain.obj : error LNK2019: createtestPair 함수에서 참조되는 확인할 수 없는 외부 기호
+TestPairMain.obj : error LNK2019: pushtestPair 함수에서 참조되는 확인할 수 없는 외부 기호
+TestPairMain.obj : error LNK2019: poptestPair 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\jms9896\workspace\git\2022-1_HW\DataStructure_Summer\HW5\x64\Debug\HW5.exe : fatal error LNK1120: 3개의 확인할 수 없는 외부 참조입니다.
