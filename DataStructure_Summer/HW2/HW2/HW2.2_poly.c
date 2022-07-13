@@ -14,39 +14,62 @@ typedef struct {			// 구조체 polynomial 정의
 
 polynomial addPoly(polynomial A, polynomial B) {
 	// Fill your code
-	polynomial* C;
-	// C=zeroP()
-	while (isZero(A) != false && isZero(B) != false) {
-		if (maxExp(A) < maxExp(B)) {
+	polynomial C;
+	int indexA = 0, indexB = 0, indexC = 0;
+	int degreeA = A.degree, degreeB = B.degree;
+	C.degree = MAX(degreeA, degreeB);
+	//while (isZero(A) != false && isZero(B) != false) {
+	//	if (maxExp(A) < maxExp(B)) {
+	//	}
+	//}
+
+	while (indexA <= A.degree && indexB <= B.degree) {
+		// A와 B의 차수가 작거나 같으면 계속 반복 
+		if (degreeA < degreeB) {
+			C.coef[indexC++] = B.coef[indexB++];
+			//계수값 집어넣기
+			degreeB--;
+		}
+		else if (degreeA == degreeB) {
+			C.coef[indexC++] = A.coef[indexA++] + B.coef[indexB++];
+			//계수가 똑같을 때, 덧셈계산
+			degreeA--;
+			degreeB--;
+		}
+
+		else {
+			// degreeA>degreeB
+			C.coef[indexC++] = A.coef[indexA++];
+			degreeA--;
 		}
 	}
+
+	return C;
 }
 
 
+//
+//
+//void zeroP(polynomial* A) {
+//	A->degree = 0; // 차수가 0이면 초기화
+//	for (int i = 0; i < MAX_DEGREE; i++) {
+//		A->coef[i] = 0; // 계수 죄다 0으로 초기화
+//	}
+//}
+//
+//bool iszero(polynomial* C) {
+//	// 다항식이 0인지 아닌지 판별
+//	for (int i = 0; i < MAX_DEGREE; i++) {
+//		if (C->degree != NULL && C->degree != 0) {
+//			// 0이나 NULL이 아니면 false 반환
+//			return false;
+//			break;
+//		}
+//		
+//	}
+//}
 
 
-void zeroP(polynomial* A) {
-	A->degree = 0; // 차수가 0이면 초기화
-	for (int i = 0; i < MAX_DEGREE; i++) {
-		A->coef[i] = 0; // 계수 죄다 0으로 초기화
-	}
-}
-
-bool iszero(polynomial* C) {
-	// 다항식이 0인지 아닌지 판별
-	for (int i = 0; i < MAX_DEGREE; i++) {
-		if (C->degree != NULL && C->degree != 0) {
-			// 0이나 NULL이 아니면 false 반환
-			return false;
-			break;
-		}
-		
-	}
-}
-
-int maxExp(polynomial A) {
-
-}
 void printPoly(polynomial P) {
 	int i, degree = P.degree;
 	
